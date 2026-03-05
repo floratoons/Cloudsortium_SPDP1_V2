@@ -10,6 +10,8 @@ TagManager:
   - Giftdrop
   - Boingdrop
   - Spikedrop
+  - zip
+  - CameraLock
   layers:
   - Default
   - TransparentFX
@@ -46,6 +48,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Base
+    uniqueID: 1908408247
     locked: 0
   - name: Top Layer
     uniqueID: 3116401555

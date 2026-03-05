@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1179b27ef8b4339438bf41565c4a0250, type: 3}
+  m_Name: Rocodrop
+  m_EditorClassIdentifier: 
+  fruitName: Rocodrop
+  fruitIcon: {fileID: 21300000, guid: 25d6734124c1cc9438e4ea624bbc10ac, type: 3}
+  fruitJingle: {fileID: 8300000, guid: 2b096aaea3ed9334ca9b90d9254d6875, type: 3}
+  pickUp: {fileID: 8300000, guid: 34d922da0b49afd49a45a1166d4f6a8c, type: 3}

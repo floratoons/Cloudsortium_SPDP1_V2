@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1179b27ef8b4339438bf41565c4a0250, type: 3}
+  m_Name: Jamdrop
+  m_EditorClassIdentifier: 
+  fruitName: Jamdrop
+  fruitIcon: {fileID: 21300000, guid: bfc3bb7fcc6e02148b401ec573b71871, type: 3}
+  fruitJingle: {fileID: 8300000, guid: 455571579b9a0824fac43072098fafbb, type: 3}
+  pickUp: {fileID: 8300000, guid: 9544f7e010ed6eb4cacc5c3d098d201d, type: 3}

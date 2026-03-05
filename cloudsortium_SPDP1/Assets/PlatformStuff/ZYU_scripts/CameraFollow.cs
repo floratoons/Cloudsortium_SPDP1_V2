@@ -10,11 +10,18 @@ public class CameraFollow : MonoBehaviour
     //higher value will follow player quickly while lower is more gradual movement
     public float smoothSpeed;
     public Vector3 offsetPos;
+
+  
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
+
+   
+       
+      
 
     // Update is called once per frame
     void LateUpdate()
@@ -25,9 +32,12 @@ public class CameraFollow : MonoBehaviour
             //creates a new position that considers where the cam is relative to the player
             Vector3 desiredPos = playerTransform.position + offsetPos;
             //lerp smoothly interpolate btwn current pos and desired pos
-            Vector3 smoothPos = Vector3.Lerp(transform.position, desiredPos, smoothSpeed);
+            Vector3 smoothPos = Vector3.Lerp(transform.position, desiredPos, smoothSpeed * Time.deltaTime);
+            smoothPos.z = offsetPos.z;
             //this line sets the cam pos to the new smoothly interpolated position
             transform.position = smoothPos;
+
         }
     }
+    
 }
