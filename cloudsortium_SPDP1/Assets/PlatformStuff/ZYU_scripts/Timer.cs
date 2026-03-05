@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
 
     public GameObject timesUp;
     public AudioSource buzzer;
+    public AudioSource threeRemaining;
 
     public float currentTime = 10f;
     private bool active = true;
@@ -45,9 +46,11 @@ public class Timer : MonoBehaviour
 
     private void UpdateTimerUI()
     {
-        if (currentTime > 0 && currentTime < 6)
+        if (currentTime > 0 && currentTime < 4)
         {
             timeText.color = Color.yellow;
+            threeRemaining.Play();
+            Destroy(threeRemaining);
         }
         else if (currentTime <1)
         {
