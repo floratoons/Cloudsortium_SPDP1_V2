@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -50,7 +50,7 @@ public class Timer : MonoBehaviour
         {
             timeText.color = Color.yellow;
             threeRemaining.Play();
-            Destroy(threeRemaining);
+            
         }
         else if (currentTime <1)
         {
@@ -74,3 +74,4 @@ public class Timer : MonoBehaviour
     }
 
 }
+*/
