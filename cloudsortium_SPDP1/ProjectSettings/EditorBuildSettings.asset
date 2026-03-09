@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/0_StartMenu.unity
+    guid: 66d311bc8a126c840a3c6fa204160795
+  - enabled: 1
     path: Assets/Scenes/1_HQ.unity
     guid: d5b34b1a580c59d418ed1bc4d98550f8
   - enabled: 1
     path: Assets/Scenes/2_Platformer.unity
     guid: 98425aa7be46743458a5b5bd63942064
+  - enabled: 1
+    path: Assets/Scenes/3_MusicCreator.unity
+    guid: 56aad58ca3aedf84887de3cd8668fd39
   m_configObjects: {}

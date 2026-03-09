@@ -17,6 +17,5 @@ public class FruitSpawner : MonoBehaviour
         GameObject newFruit = Instantiate(meloPrefab, transform.position, Quaternion.identity);
         newFruit.GetComponent<Melodrop>().fruitData = randomData;
         newFruit.transform.SetParent(this.transform);
-
     }
 }
