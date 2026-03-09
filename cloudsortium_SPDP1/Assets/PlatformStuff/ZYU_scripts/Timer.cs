@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -8,11 +8,15 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timeText;
-    [SerializeField] private Movement stopMoving;
+    [SerializeField] private PlayerMovement stopMoving;
 
     public GameObject timesUp;
     public AudioSource buzzer;
     public AudioSource threeRemaining;
+
+   
+    private bool cdPlayed = false;
+    private bool buzzerPlayed = false;
 
     public float currentTime = 10f;
     private bool active = true;
@@ -46,18 +50,20 @@ public class Timer : MonoBehaviour
 
     private void UpdateTimerUI()
     {
-        if (currentTime > 0 && currentTime < 4)
+        if (currentTime > 0 && currentTime < 4 && cdPlayed == false)
         {
             timeText.color = Color.yellow;
-            threeRemaining.Play();
-            
+            ThreeSeconds();
+            cdPlayed = true;
+
         }
-        else if (currentTime <1)
+        else if (currentTime <1 && buzzerPlayed == false)
         {
             timeText.color = Color.red;
-            buzzer.Play();
             timesUp.gameObject.SetActive(true);
             stopMoving.StopMoving();
+            Buzzer();
+            buzzerPlayed = true;
             Debug.Log("TIMES UP BOI");
             StartCoroutine(Wait());
 
@@ -73,5 +79,14 @@ public class Timer : MonoBehaviour
         SceneManager.LoadScene("1_HQ");
     }
 
+    void Buzzer()
+    {
+        buzzer.Play();
+    }
+
+    void ThreeSeconds()
+    {
+        threeRemaining.Play();
+        
+    }
 }
-*/

@@ -1,9 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.VersionControl;
+using System.Collections;
 
 public class FruitTracker : MonoBehaviour
 {
     public static FruitTracker Instance;
+    public TextMeshProUGUI touchedFruit; //for display text
+
 
     //insert fruit name AND number
     //i finally searched up how to use a dictionary 
@@ -29,7 +34,11 @@ public class FruitTracker : MonoBehaviour
         PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
         PlayerPrefs.Save();
 
+        
+
         // tracker in the console instead of the tmp bc it fucked me in the ass
         Debug.Log($"ayo you GAINED 1 to {fruitName}. yo total {fruitName}s: {inventory[fruitName]}");
     }
+
+    
 }

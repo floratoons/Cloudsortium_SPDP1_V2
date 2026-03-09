@@ -41,18 +41,22 @@ public class Movement : MonoBehaviour
 */
 
 using System;
+using System.Collections;
 using UnityEngine;
+
 
 public class PlayerMovement : MonoBehaviour
 {
     float horizontalInput;
-    float moveSpeed = 5f;
-    bool isFacingRight = false;
-    float jumpPower = 10f;
+    public float moveSpeed;
+    bool isFacingRight = true;
+    public float jumpPower;
     bool isGrounded = false;
+
 
     Rigidbody2D rb;
     Animator animator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +64,11 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
+    public static PlayerMovement Instance; // Add this line
 
+void Awake() {
+    Instance = this; // Set the reference when the game starts
+}
     // Update is called once per frame
     void Update()
     {
@@ -98,5 +106,32 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = true;
         animator.SetBool("isJumping", !isGrounded);
+
+   
     }
+
+    public IEnumerator SpeedBoost()
+    {
+        float originalSpeed = moveSpeed;
+        moveSpeed = 8f;
+        yield return new WaitForSeconds(4.0f);
+        moveSpeed = originalSpeed;
+    }
+
+    public IEnumerator JumpPower()
+    {
+        float originalJump = jumpPower;
+        jumpPower = 15f;
+        yield return new WaitForSeconds(4.0f);
+        jumpPower = originalJump;
+    }
+
+    //timer doesnt need a coroutine here!
+    public void StopMoving()
+    {
+        rb.velocity = Vector2.zero;
+        this.enabled = false;
+    }
+
+  
 }
