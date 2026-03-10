@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DropManager : MonoBehaviour, IDropHandler
 {
     public int inventorySize;
+    public string keyMelodropString;
+
+    public melodropPlacement placement;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -15,6 +20,11 @@ public class DropManager : MonoBehaviour, IDropHandler
             droppedItem.GetComponent<ItemInfo>().lastPosition = transform;
         }
 
+        Debug.Log("Doing the melodropPlacement event");
+        placement.Invoke(droppedItem.GetComponent<Image>().sprite.name);
     }
 
 }
+[System.Serializable]
+public class melodropPlacement : UnityEvent<string>
+{ }

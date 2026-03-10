@@ -9,13 +9,14 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     //public Item currentItem;
-    public GameObject displayItem;
+    //public GameObject displayItem;
     public Transform lastPosition;
     public Image itemIcon;
+    public AudioClip audioClip;
 
     private void Start()
     {
-        displayItem = GameObject.FindGameObjectWithTag("displayText");
+        //displayItem = GameObject.FindGameObjectWithTag("displayText");
         itemIcon = GetComponent<Image>();
     }
 

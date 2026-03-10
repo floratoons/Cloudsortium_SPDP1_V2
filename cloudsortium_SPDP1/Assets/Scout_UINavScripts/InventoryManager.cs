@@ -33,6 +33,7 @@ public class InventoryManager : MonoBehaviour
         else
         {
             collectedDrop.transform.SetParent(hotbarGrid.transform);
+
         }
     }
 }

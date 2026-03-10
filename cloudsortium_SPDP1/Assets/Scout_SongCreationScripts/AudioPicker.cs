@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class AudioPicker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<GameObject> slotList = new List<GameObject>();
+    public GameObject audioVis;
+
+    private void Start()
     {
-        
+        audioVis = GameObject.Find("AudioVis");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void placementCheck(string placedDropString)
     {
-        
+        for (int i = 0; i < slotList.Count; i++)
+        {
+
+        }
     }
 }

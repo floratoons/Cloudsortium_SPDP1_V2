@@ -15,12 +15,18 @@ public class AudioClip_Holder : MonoBehaviour
 
     void Start()
     {
+        /*
         // Get the AudioSource component attached to this GameObject
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             Debug.LogError("AudioSource component not found! Please attach one.");
-        }
+        }*/
+    }
+
+    private void Update()
+    {
+        
     }
 
     // Example method to play a random sound from the array

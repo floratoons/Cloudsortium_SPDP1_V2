@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Dropped Item");
+        Debug.Log("moved item back to inventory");
         GameObject droppedItem = eventData.pointerDrag;
 
         if (transform.childCount < inventorySize)

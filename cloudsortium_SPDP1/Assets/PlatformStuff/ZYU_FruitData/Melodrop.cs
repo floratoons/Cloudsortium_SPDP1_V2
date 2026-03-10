@@ -8,13 +8,13 @@ public class Melodrop : MonoBehaviour
 {
     public FruitData fruitData;
     private AudioSource audioSource;
-    public InventoryManager inventoryManagerScript;
+    //public InventoryManager inventoryManagerScript;
 
     void Start()
     {  
        GetComponent<SpriteRenderer>().sprite = fruitData.fruitIcon;
        audioSource = GetComponent<AudioSource>();
-       inventoryManagerScript = GameObject.Find("Inventory_Holder").GetComponent<InventoryManager>();
+       //inventoryManagerScript = GameObject.Find("Inventory_Holder").GetComponent<InventoryManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
