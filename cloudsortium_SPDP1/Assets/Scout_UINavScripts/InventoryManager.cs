@@ -38,15 +38,13 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemtoInventory(GameObject collectedDrop)
     {
-        if (hotbarGrid.transform.childCount < 9)
-        {
-            collectedDrop.transform.SetParent(hotbarGrid.transform);
-        }
-        else
+        if (hotbarGrid.transform.childCount > 9)
         {
             Destroy(collectedDrop);
         }
+        else
+        {
+            collectedDrop.transform.SetParent(hotbarGrid.transform);
+        }
     }
-
-
 }
