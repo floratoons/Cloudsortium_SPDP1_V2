@@ -13,7 +13,7 @@ public class LockCamera : MonoBehaviour
         if (collision.CompareTag("CameraLock"))
         {
             cameraScript.enabled = false;
-            cameraScript.GetComponent<Camera>().orthographicSize = 6.5f;
+            cameraScript.GetComponent<Camera>().orthographicSize = 9f;
             Debug.Log("locked");
         }
     }
@@ -24,7 +24,7 @@ public class LockCamera : MonoBehaviour
         if (collision.CompareTag("CameraLock"))
         {
             cameraScript.enabled = true;
-            cameraScript.GetComponent<Camera>().orthographicSize = 4f;
+            cameraScript.GetComponent<Camera>().orthographicSize = 5f;
             Debug.Log("unlocked");
         }
     }

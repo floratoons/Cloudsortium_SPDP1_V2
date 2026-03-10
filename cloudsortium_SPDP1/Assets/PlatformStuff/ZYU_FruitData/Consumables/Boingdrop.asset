@@ -16,3 +16,4 @@ MonoBehaviour:
   fruitIcon: {fileID: 21300000, guid: ae162a65d82815642b9c3dd7a96526a2, type: 3}
   fruitJingle: {fileID: 0}
   pickUp: {fileID: 8300000, guid: f6143b45fceb05441a4c48e8859753e2, type: 3}
+  gainedMessage: gained speed for 4 seconds!

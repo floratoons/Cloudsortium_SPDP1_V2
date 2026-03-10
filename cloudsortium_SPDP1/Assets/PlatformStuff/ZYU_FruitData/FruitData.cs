@@ -8,5 +8,6 @@ public class FruitData : ScriptableObject //use this for all fruit
     public string fruitName;
     public Sprite fruitIcon;
     public AudioClip fruitJingle; //for the moosic, comsumables will leave this empty
-    public AudioClip pickUp;   
+    public AudioClip pickUp;
+    public string gainedMessage;
 }
