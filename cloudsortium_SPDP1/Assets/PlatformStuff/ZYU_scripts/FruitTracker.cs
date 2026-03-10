@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 
 public class FruitTracker : MonoBehaviour
 {
     public static FruitTracker Instance;
-    public InventoryManager inventoryManagerScript;
+    //public InventoryManager inventoryManagerScript;
+    public TextMeshProUGUI touchedFruit;
 
     //insert fruit name AND number
     //i finally searched up how to use a dictionary 
@@ -16,7 +18,7 @@ public class FruitTracker : MonoBehaviour
     void Awake()
     {
         if (Instance == null) Instance = this;
-        inventoryManagerScript = GameObject.Find("Inventory_Holder").GetComponent<InventoryManager>();
+        //inventoryManagerScript = GameObject.Find("Inventory_Holder").GetComponent<InventoryManager>();
     }
 
     public void AddFruit(string fruitName)

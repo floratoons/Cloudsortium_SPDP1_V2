@@ -8648,7 +8648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17b302a23ac18447b2e3dbb4051bef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryManagerScript: {fileID: 0}
   touchedFruit: {fileID: 1435906140}
+  currentFruitPickedUp: 
 --- !u!70 &453924327
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9495,7 +9497,7 @@ Transform:
   m_GameObject: {fileID: 472945406}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -202.7, y: 28.9, z: -0.088045605}
+  m_LocalPosition: {x: -202.7, y: 28.9, z: 1.4499999}
   m_LocalScale: {x: 1.0849, y: 1.0849, z: 1.0849}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9579,7 +9581,7 @@ Transform:
   m_GameObject: {fileID: 474553933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -198.2, y: 25.782314, z: -0.088045605}
+  m_LocalPosition: {x: -198.2, y: 25.782314, z: 1.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12062,7 +12064,7 @@ Transform:
   m_GameObject: {fileID: 597726580}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -202.8, y: 25.782314, z: -0.088045605}
+  m_LocalPosition: {x: -202.8, y: 25.782314, z: -1.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21441,7 +21443,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 22
   m_Sprite: {fileID: 21300000, guid: 5857fca39007b264ca5d70ef20eccc60, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.83584905, g: 0.9208616, b: 1, a: 0.9490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26867,7 +26869,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17b302a23ac18447b2e3dbb4051bef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryManagerScript: {fileID: 0}
   touchedFruit: {fileID: 1435906140}
+  currentFruitPickedUp: 
 --- !u!114 &1435906140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36811,7 +36815,7 @@ Transform:
   m_GameObject: {fileID: 1946774933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -188.7, y: 25.782314, z: -0.088045605}
+  m_LocalPosition: {x: -188.7, y: 25.782314, z: -2.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -16,24 +16,12 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject hotbarGrid;
 
-    public UnityEvent addToInventory;
+    //public UnityEvent addToInventory;
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            // If no instance exists, set this one as the instance
-            Instance = this;
-            // Mark the GameObject to not be destroyed on scene load
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            // If an instance already exists, destroy this new object to prevent duplicates
-            Destroy(gameObject);
-        }
-
         hotbarGrid = GameObject.Find("Inventory_LayoutGroup");
+        hotbarImageDisplayScript = hotbarGrid.GetComponent<HotbarImageDisplay>();
     }
 
     public void AddItemtoInventory(GameObject collectedDrop)

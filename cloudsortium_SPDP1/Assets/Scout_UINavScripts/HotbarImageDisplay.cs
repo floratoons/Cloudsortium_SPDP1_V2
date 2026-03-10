@@ -18,16 +18,15 @@ public class HotbarImageDisplay : MonoBehaviour
     void Update()
     {
         uiImage.sprite = GetComponentInChildren<Melodrop>().fruitData.fruitIcon;
-    
+        Debug.Log("1. Getting " + uiImage.GetComponentInChildren<Melodrop>().fruitData.fruitIcon + " icon");
+
         // Ensure both components exist before trying to sync
         if (uiImage != null && sourceSpriteRenderer != null)
         {
+            uiImage.sprite = GetComponentInChildren<Melodrop>().fruitData.fruitIcon;
             // Set the UI Image's sprite to the source SpriteRenderer's current sprite
             uiImage.sprite = sourceSpriteRenderer.sprite;
-        }
-        else
-        {
-            Debug.LogError("Missing Image component or Source Sprite Renderer reference!");
+            Debug.Log("2. Getting " + uiImage.GetComponentInChildren<SpriteRenderer>().sprite + " sprite");
         }
     }
 
