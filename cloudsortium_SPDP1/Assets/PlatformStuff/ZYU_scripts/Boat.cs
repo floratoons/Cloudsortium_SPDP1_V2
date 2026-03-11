@@ -1,25 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Boat : MonoBehaviour
 {
-    public float speed;
-    public int startingPoint;
-    public Transform[] points;
+    //public float speed;
+   // public Transform[] points;
+    //private int i;
 
-    private int i;
-    // Start is called before the first frame update
+  
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            
+            collision.gameObject.transform.SetParent(transform);
+        }
+    }
+
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.transform.SetParent(null);
+        }
+    }
     void Start()
     {
-        transform.position = points[startingPoint].position;
+      //  transform.position = points[startingPoint].position;
     }
 
     // Update is called once per frame
     void Update()
     { 
        
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
+       /* if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
         {
              
             i++;
@@ -32,11 +46,11 @@ public class Boat : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
-
+       */
 
     }
 
-    void FlipSprite()
+    /*void FlipSprite()
     {
         { 
             Vector3 ls = transform.localScale;
@@ -44,4 +58,5 @@ public class Boat : MonoBehaviour
             transform.localScale = ls;
         }
     }
+    */
 }
