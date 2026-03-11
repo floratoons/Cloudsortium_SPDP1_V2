@@ -1155,7 +1155,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8972244, y: -3.3522873}
+  m_Offset: {x: -0.72530365, y: -3.3522873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1166,7 +1166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.5148315, y: 11.664322}
+  m_Size: {x: 9.759888, y: 11.664322}
   m_EdgeRadius: 0
 --- !u!114 &56785756
 MonoBehaviour:
@@ -3354,7 +3354,7 @@ Transform:
   m_GameObject: {fileID: 209836996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -58.1, y: -27.8, z: 0}
+  m_LocalPosition: {x: -69.29, y: -22.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3374,7 +3374,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleMelo:
   - {fileID: 11400000, guid: 41c63f87e5b1ecb448eaa61bd19729b2, type: 2}
-  - {fileID: 11400000, guid: 64b3fc0dc51a5004b91023d7a32f2a36, type: 2}
   - {fileID: 11400000, guid: 39a8ccaba66840c47a4d735f2dd704cb, type: 2}
   meloPrefab: {fileID: 8967049923324499255, guid: 77bc3ab4b3ec5ab4cb5bb17cccbd8dde, type: 3}
 --- !u!1 &216183676
@@ -7500,7 +7499,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 549041271d3a0b64fa22a638d5230c9c, type: 3}
   m_Color: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 0.13725491}
   m_FlipX: 0
@@ -10938,7 +10937,7 @@ Transform:
   m_GameObject: {fileID: 525423828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.47, y: -21.3, z: 0.059363343}
+  m_LocalPosition: {x: 45.68, y: -31.13, z: 0.059363343}
   m_LocalScale: {x: 0.269388, y: 0.28992307, z: 1.2828}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14155,7 +14154,7 @@ Transform:
   m_GameObject: {fileID: 670563999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.27, y: -16.279999, z: 0}
+  m_LocalPosition: {x: -68.8, y: -27.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14174,8 +14173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleMelo:
-  - {fileID: 11400000, guid: 834bbea09d58c20409daf14e3d02d743, type: 2}
-  - {fileID: 11400000, guid: 39a8ccaba66840c47a4d735f2dd704cb, type: 2}
+  - {fileID: 11400000, guid: 29cfd6287972b474990b05d2ffb922c0, type: 2}
   meloPrefab: {fileID: 8967049923324499255, guid: 77bc3ab4b3ec5ab4cb5bb17cccbd8dde, type: 3}
 --- !u!1 &684355944
 GameObject:
@@ -15180,7 +15178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679178305785475736, guid: abacea4c5d71cea41bda47111d492e15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -30.19
+      value: -30.31
       objectReference: {fileID: 0}
     - target: {fileID: 8679178305785475736, guid: abacea4c5d71cea41bda47111d492e15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15690,7 +15688,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8972244, y: -3.3522873}
+  m_Offset: {x: -0.61340714, y: -3.3522873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15701,7 +15699,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.5148315, y: 11.664322}
+  m_Size: {x: 9.536095, y: 11.664322}
   m_EdgeRadius: 0
 --- !u!114 &737032836
 MonoBehaviour:
@@ -18062,6 +18060,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.9202385, y: 5.163867}
   m_EdgeRadius: 0
+--- !u!1 &848988580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848988581}
+  - component: {fileID: 848988582}
+  m_Layer: 0
+  m_Name: A1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848988581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848988580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35.57, y: -27.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 967512902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848988582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848988580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aec6022b6779dc40aa7f5db135b3914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleMelo:
+  - {fileID: 11400000, guid: eaf78387b139e034a8e001c87c9171b8, type: 2}
+  meloPrefab: {fileID: 8967049923324499255, guid: 77bc3ab4b3ec5ab4cb5bb17cccbd8dde, type: 3}
 --- !u!1 &854305000
 GameObject:
   m_ObjectHideFlags: 0
@@ -18336,7 +18381,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8972244, y: -3.3522873}
+  m_Offset: {x: -0.97706985, y: -3.3522873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18347,7 +18392,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.5148315, y: 11.664322}
+  m_Size: {x: 10.26342, y: 11.664322}
   m_EdgeRadius: 0
 --- !u!114 &860051014
 MonoBehaviour:
@@ -18805,7 +18850,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8972244, y: -3.3522873}
+  m_Offset: {x: -0.9509239, y: -3.3522873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18816,7 +18861,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.5148315, y: 11.664322}
+  m_Size: {x: 10.211128, y: 11.664322}
   m_EdgeRadius: 0
 --- !u!114 &878836528
 MonoBehaviour:
@@ -20575,6 +20620,7 @@ Transform:
   - {fileID: 1895414727}
   - {fileID: 970921062}
   - {fileID: 670564000}
+  - {fileID: 848988581}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970921061
@@ -20603,7 +20649,7 @@ Transform:
   m_GameObject: {fileID: 970921061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.33, y: -7.669999, z: 0}
+  m_LocalPosition: {x: -76.33, y: -6.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20622,9 +20668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleMelo:
-  - {fileID: 11400000, guid: 24ee274aa6d52e6448af857db174eb96, type: 2}
-  - {fileID: 11400000, guid: e539110f22becda488867723ee3492bf, type: 2}
-  - {fileID: 11400000, guid: c3ffec3b02616d043be6903c9d6cbd92, type: 2}
+  - {fileID: 11400000, guid: eaf78387b139e034a8e001c87c9171b8, type: 2}
   meloPrefab: {fileID: 8967049923324499255, guid: 77bc3ab4b3ec5ab4cb5bb17cccbd8dde, type: 3}
 --- !u!1 &972878872
 GameObject:
@@ -23269,7 +23313,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 549041271d3a0b64fa22a638d5230c9c, type: 3}
   m_Color: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 0.13725491}
   m_FlipX: 0
@@ -32931,7 +32975,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: e5d99f00b55c4b14c931d5d10b82a6d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -35206,7 +35250,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 25
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5921569, g: 0.36862746, b: 0.2901961, a: 1}
   m_FlipX: 0
@@ -38854,7 +38898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679178305785475736, guid: abacea4c5d71cea41bda47111d492e15, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6758165
+      value: 2.6223001
       objectReference: {fileID: 0}
     - target: {fileID: 8679178305785475736, guid: abacea4c5d71cea41bda47111d492e15, type: 3}
       propertyPath: m_LocalScale.y
@@ -38870,7 +38914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8679178305785475736, guid: abacea4c5d71cea41bda47111d492e15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.87
+      value: -14.95
       objectReference: {fileID: 0}
     - target: {fileID: 8679178305785475736, guid: abacea4c5d71cea41bda47111d492e15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39212,7 +39256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleMelo:
   - {fileID: 11400000, guid: 64b3fc0dc51a5004b91023d7a32f2a36, type: 2}
-  - {fileID: 11400000, guid: c1847326c2d8a8149a62da868e2208a0, type: 2}
+  - {fileID: 11400000, guid: 64b3fc0dc51a5004b91023d7a32f2a36, type: 2}
   meloPrefab: {fileID: 8967049923324499255, guid: 77bc3ab4b3ec5ab4cb5bb17cccbd8dde, type: 3}
 --- !u!1 &1898871049
 GameObject:
@@ -42452,7 +42496,7 @@ Transform:
   m_GameObject: {fileID: 2015015761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.43, y: -6.4899993, z: 0}
+  m_LocalPosition: {x: -56.07, y: -8.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42472,8 +42516,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleMelo:
   - {fileID: 11400000, guid: 40fff8eb33ad9b94daaeb78b45114640, type: 2}
-  - {fileID: 11400000, guid: e539110f22becda488867723ee3492bf, type: 2}
-  - {fileID: 11400000, guid: 51dbcb1c7dfb16e4ba4177f80a95cd03, type: 2}
+  - {fileID: 11400000, guid: e428d2058d6d6064d831f9455b4d19ad, type: 2}
+  - {fileID: 11400000, guid: c3ffec3b02616d043be6903c9d6cbd92, type: 2}
   meloPrefab: {fileID: 8967049923324499255, guid: 77bc3ab4b3ec5ab4cb5bb17cccbd8dde, type: 3}
 --- !u!1 &2015608368
 GameObject:
