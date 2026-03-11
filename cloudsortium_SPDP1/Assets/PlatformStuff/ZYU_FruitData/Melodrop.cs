@@ -22,7 +22,7 @@ public class Melodrop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerMovement player = other.GetComponent<PlayerMovement>();
-            //FruitTracker.Instance.touchedFruit.text = fruitData.gainedMessage; 
+            FruitTracker.Instance.touchedFruit.text = fruitData.gainedMessage; 
             //reference the tmp in fruit tracker and pull the message from the scriptable object and display it
 
             if (fruitData.fruitName == "Boingdrop")
@@ -62,6 +62,7 @@ public class Melodrop : MonoBehaviour
         //inventoryManagerScript.AddItemtoInventory(gameObject);
 
          Destroy(gameObject);
+        Debug.Log("destroyed");
         // ^^ removed to instead re-parent it to the inventory
         // & hopefully visualize that info on the canvas w/ the HotbarImageDisplay class
 

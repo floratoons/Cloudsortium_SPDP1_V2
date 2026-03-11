@@ -24,10 +24,13 @@ public class FruitTracker : MonoBehaviour
     public void AddFruit(string fruitName)
     {
         //set fruit int to zero if new
-        if (!inventory.ContainsKey(fruitName))
+        /*(!inventory.ContainsKey(fruitName))
         {
             inventory[fruitName] = PlayerPrefs.GetInt(fruitName, 0);
         }
+        */
+    
+       
 
         //add  fruit
         currentFruitPickedUp = fruitName;
@@ -37,16 +40,17 @@ public class FruitTracker : MonoBehaviour
         PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
         PlayerPrefs.Save();
 
-        LogInventoryContents(fruitName);
+       // LogInventoryContents(fruitName);
 
-        Debug.Log("Trying to update inventory");
+       // Debug.Log("Trying to update inventory");
     }
 
-    void LogInventoryContents(string collectedFruitName)
+   /* void LogInventoryContents(string collectedFruitName)
     {
         foreach (KeyValuePair<string, int> pair in inventory)
         {
             Debug.Log("Collected item: " + pair.Key + " | Amount: " + pair.Value, this);
         }
     }
+   */
 }

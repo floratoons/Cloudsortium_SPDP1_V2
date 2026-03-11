@@ -12,6 +12,7 @@ TagManager:
   - Spikedrop
   - zip
   - CameraLock
+  - Boat
   layers:
   - Default
   - TransparentFX
