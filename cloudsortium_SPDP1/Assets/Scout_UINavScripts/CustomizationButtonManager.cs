@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CustomizationButtonManager : MonoBehaviour
@@ -9,6 +10,12 @@ public class CustomizationButtonManager : MonoBehaviour
     public List<GameObject> custSprites = new List<GameObject>();
     private int custSpriteIndex = 0;
     private EventSystem eventSystem;
+
+    public bool finishedGame = false;
+
+    //private int clicks = 0;
+    //public GameObject popup1;
+    //public GameObject popup2;
 
     void Start()
     {
@@ -27,15 +34,18 @@ public class CustomizationButtonManager : MonoBehaviour
 
     private void Update()
     {
-        SetActiveObjectByIndex(custSpriteIndex);
+        if (gameObject != null)
+        {
+            SetActiveObjectByIndex();
+        }
     }
 
-    public void SetActiveObjectByIndex(int activeIndex)
+    public void SetActiveObjectByIndex()
     {
         for (int i = 0; i < custSprites.Count; i++)
         {
             // check if the current indexed obj matches the currently selected obj
-            if (i == activeIndex)
+            if (i == custSpriteIndex)
             {
                 // activate the indexed obj
                 custSprites[i].SetActive(true);

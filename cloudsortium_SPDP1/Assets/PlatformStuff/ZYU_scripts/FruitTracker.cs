@@ -1,22 +1,24 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.VersionControl;
-using System.Collections;
+
 
 public class FruitTracker : MonoBehaviour
 {
     public static FruitTracker Instance;
-    public TextMeshProUGUI touchedFruit; //for display text
-
+    //public InventoryManager inventoryManagerScript;
+    public TextMeshProUGUI touchedFruit;
 
     //insert fruit name AND number
     //i finally searched up how to use a dictionary 
-    private Dictionary<string, int> inventory = new Dictionary<string, int>();
+    public Dictionary<string, int> inventory = new Dictionary<string, int>();
+
+    public string currentFruitPickedUp;
 
     void Awake()
     {
         if (Instance == null) Instance = this;
+        //inventoryManagerScript = GameObject.Find("Inventory_Holder").GetComponent<InventoryManager>();
     }
 
     public void AddFruit(string fruitName)
@@ -28,17 +30,23 @@ public class FruitTracker : MonoBehaviour
         }
 
         //add  fruit
+        currentFruitPickedUp = fruitName;
         inventory[fruitName]++;
 
         //reference the actual fruits name
         PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
         PlayerPrefs.Save();
 
-        
+        LogInventoryContents(fruitName);
 
-        // tracker in the console instead of the tmp bc it fucked me in the ass
-        Debug.Log($"ayo you GAINED 1 to {fruitName}. yo total {fruitName}s: {inventory[fruitName]}");
+        Debug.Log("Trying to update inventory");
     }
 
-    
+    void LogInventoryContents(string collectedFruitName)
+    {
+        foreach (KeyValuePair<string, int> pair in inventory)
+        {
+            Debug.Log("Collected item: " + pair.Key + " | Amount: " + pair.Value, this);
+        }
+    }
 }

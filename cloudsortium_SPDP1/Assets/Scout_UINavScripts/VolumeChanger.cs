@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VolumeChanger : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class VolumeChanger : MonoBehaviour
 
     private void Start()
     {
+        music = gameObject.GetComponent<AudioSource>();
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            volumeScrollbar = GameObject.Find("VolumeScrollbar").GetComponent<Scrollbar>();
+            music = GameObject.Find("BGMusic_Player").GetComponent<AudioSource>();
+        }
+
         if (music != null)
         {
             // access the current volume
