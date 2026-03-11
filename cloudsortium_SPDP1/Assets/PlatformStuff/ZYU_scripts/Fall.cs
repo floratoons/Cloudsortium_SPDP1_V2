@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class Fall : MonoBehaviour
 {
-    public 
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+      rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (gameObject.CompareTag("Player"))
+            Debug.Log("touched player");
+        {
+            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            Debug.Log("turned dynamic");
+        }
     }
 
-    
+
 
 }
