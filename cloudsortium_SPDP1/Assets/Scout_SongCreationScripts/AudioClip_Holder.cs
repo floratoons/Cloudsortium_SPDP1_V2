@@ -7,7 +7,6 @@ public class AudioClip_Holder : MonoBehaviour
     public static AudioClip_Holder Instance;
     
     [SerializeField]
-    public List<AudioClip> audioClips = new List<AudioClip>();
 
     public AudioClip[] combinedAudioPlay;
 
@@ -29,15 +28,4 @@ public class AudioClip_Holder : MonoBehaviour
         
     }
 
-    // Example method to play a random sound from the array
-    public void PlayRandomClip()
-    {
-        if (combinedAudioPlay.Length > 0 && audioSource != null)
-        {
-            // Select a random index
-            int randomIndex = Random.Range(0, combinedAudioPlay.Length);
-            // Play the selected clip
-            audioSource.PlayOneShot(audioClips[randomIndex]);
-        }
-    }
 }

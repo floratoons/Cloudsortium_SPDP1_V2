@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,6 +11,7 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     //public Item currentItem;
     //public GameObject displayItem;
+    public string itemName;
     public Transform lastPosition;
     public Image itemIcon;
     public AudioClip audioClip;
