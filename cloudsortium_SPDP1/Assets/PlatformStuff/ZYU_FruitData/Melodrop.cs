@@ -22,18 +22,18 @@ public class Melodrop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerMovement player = other.GetComponent<PlayerMovement>();
-            //FruitTracker.Instance.touchedFruit.text = fruitData.gainedMessage; 
+            FruitTracker.Instance.touchedFruit.text = fruitData.gainedMessage; 
             //reference the tmp in fruit tracker and pull the message from the scriptable object and display it
 
-            if (fruitData.fruitName == "Boingdrop")
+            if (fruitData.fruitName == "Boostdrop")
             {
                 player.StartCoroutine(player.SpeedBoost());
             }
-            else if (fruitData.fruitName == "Giftdrop")
+            else if (fruitData.fruitName == "Boingdrop")
             {
                 player.StartCoroutine(player.JumpPower());
             }
-            else if (fruitData.fruitName == "Boostdrop")
+            else if (fruitData.fruitName == "Giftdrop")
             {
                 Timer timerScript = FindFirstObjectByType<Timer>();
                 timerScript.currentTime += 10f; //adds ten seconds to timer
@@ -45,7 +45,7 @@ public class Melodrop : MonoBehaviour
     }
 
     void Collect()
-    {
+    /*{
         AudioSource.PlayClipAtPoint(fruitData.pickUp, transform.position);
 
         if (FruitTracker.Instance != null && fruitData != null)
@@ -62,6 +62,7 @@ public class Melodrop : MonoBehaviour
         //inventoryManagerScript.AddItemtoInventory(gameObject);
 
          Destroy(gameObject);
+        Debug.Log("destroyed");
         // ^^ removed to instead re-parent it to the inventory
         // & hopefully visualize that info on the canvas w/ the HotbarImageDisplay class
 
@@ -73,4 +74,24 @@ public class Melodrop : MonoBehaviour
     {
         
     }*/
+
+    {
+        AudioSource.PlayClipAtPoint(fruitData.pickUp, transform.position);
+
+        if (FruitTracker.Instance != null && fruitData != null)
+        {
+            FruitTracker.Instance.AddFruit(fruitData.fruitName);
+        }
+
+        if (transform.parent != null)
+        {
+            transform.parent.SendMessage("OnFruitCollected", SendMessageOptions.DontRequireReceiver);
+        }
+        Destroy(gameObject);
+
+        //if this item is tagged" insert consumable fruit name " then
+        //acitvate this! reference player movement for movement changes  UHHH COME BACK HERE
+    }
+
+
 }

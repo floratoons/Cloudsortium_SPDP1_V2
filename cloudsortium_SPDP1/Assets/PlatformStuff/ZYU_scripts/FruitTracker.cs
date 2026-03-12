@@ -24,29 +24,48 @@ public class FruitTracker : MonoBehaviour
     public void AddFruit(string fruitName)
     {
         //set fruit int to zero if new
+        /*(!inventory.ContainsKey(fruitName))
+        {
+            inventory[fruitName] = PlayerPrefs.GetInt(fruitName, 0);
+        }
+        */
+        //set fruit int to zero if new
         if (!inventory.ContainsKey(fruitName))
         {
             inventory[fruitName] = PlayerPrefs.GetInt(fruitName, 0);
         }
 
         //add  fruit
-        currentFruitPickedUp = fruitName;
         inventory[fruitName]++;
 
         //reference the actual fruits name
         PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
         PlayerPrefs.Save();
 
-        LogInventoryContents(fruitName);
+        // tracker in the console instead of the tmp bc it fucked me in the ass
+        Debug.Log($"ayo you GAINED 1 to {fruitName}. yo total {fruitName}s: {inventory[fruitName]}");
 
-        Debug.Log("Trying to update inventory");
+
+
+        //add  fruit
+       // currentFruitPickedUp = fruitName;
+        //inventory[fruitName]++;
+
+        //reference the actual fruits name
+       // PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
+       // PlayerPrefs.Save();
+
+       // LogInventoryContents(fruitName);
+
+       // Debug.Log("Trying to update inventory");
     }
 
-    void LogInventoryContents(string collectedFruitName)
+   /* void LogInventoryContents(string collectedFruitName)
     {
         foreach (KeyValuePair<string, int> pair in inventory)
         {
             Debug.Log("Collected item: " + pair.Key + " | Amount: " + pair.Value, this);
         }
     }
+   */
 }
