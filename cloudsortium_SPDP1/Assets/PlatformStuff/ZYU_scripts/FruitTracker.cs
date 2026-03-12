@@ -29,16 +29,31 @@ public class FruitTracker : MonoBehaviour
             inventory[fruitName] = PlayerPrefs.GetInt(fruitName, 0);
         }
         */
-    
-       
+        //set fruit int to zero if new
+        if (!inventory.ContainsKey(fruitName))
+        {
+            inventory[fruitName] = PlayerPrefs.GetInt(fruitName, 0);
+        }
 
         //add  fruit
-        currentFruitPickedUp = fruitName;
         inventory[fruitName]++;
 
         //reference the actual fruits name
         PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
         PlayerPrefs.Save();
+
+        // tracker in the console instead of the tmp bc it fucked me in the ass
+        Debug.Log($"ayo you GAINED 1 to {fruitName}. yo total {fruitName}s: {inventory[fruitName]}");
+
+
+
+        //add  fruit
+       // currentFruitPickedUp = fruitName;
+        //inventory[fruitName]++;
+
+        //reference the actual fruits name
+       // PlayerPrefs.SetInt(fruitName, inventory[fruitName]);
+       // PlayerPrefs.Save();
 
        // LogInventoryContents(fruitName);
 

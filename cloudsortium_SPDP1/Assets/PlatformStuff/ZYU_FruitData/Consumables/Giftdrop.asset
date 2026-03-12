@@ -16,4 +16,4 @@ MonoBehaviour:
   fruitIcon: {fileID: 21300000, guid: 913568c59adb1214f90ef5069c73e451, type: 3}
   fruitJingle: {fileID: 0}
   pickUp: {fileID: 8300000, guid: f6143b45fceb05441a4c48e8859753e2, type: 3}
-  gainedMessage: jump speed increase for 4 seconds!
+  gainedMessage: +10 seconds!
