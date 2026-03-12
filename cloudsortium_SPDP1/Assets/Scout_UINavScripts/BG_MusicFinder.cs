@@ -16,10 +16,6 @@ public class BG_MusicFinder : MonoBehaviour
             GameObject bgmusicholder = GameObject.Find("BGMusic_Player");
             bgMusic = bgmusicholder.GetComponent<AudioSource>();
         }
-        else if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            bgMusic.Stop();
-        }
     }
 
     private void Update()
