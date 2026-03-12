@@ -13,6 +13,7 @@ TagManager:
   - zip
   - CameraLock
   - Boat
+  - BoatTrigger
   layers:
   - Default
   - TransparentFX

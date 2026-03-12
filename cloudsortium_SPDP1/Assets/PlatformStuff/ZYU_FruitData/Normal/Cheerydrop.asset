@@ -16,4 +16,4 @@ MonoBehaviour:
   fruitIcon: {fileID: 21300000, guid: edb359df3e5092b47884c8463c57ae18, type: 3}
   fruitJingle: {fileID: 8300000, guid: 5aedf2148afcb3449bbfc18c42b4942d, type: 3}
   pickUp: {fileID: 8300000, guid: 9c6bf7079ef64c743880c3ed9e9e2372, type: 3}
-  gainedMessage: cheerydrop +1
+  gainedMessage: +1 cheerydrop

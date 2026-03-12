@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class flipboat : MonoBehaviour
 {
-   // private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
 
     void Start()
     {
-      //  spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.CompareTag("Boat"))
+        Debug.Log ("collision registered with " + trigger);
+        if (trigger.CompareTag("BoatTrigger"))
         {
-
-            transform.localScale = new Vector3(-1, 1, 1);
+            Vector3 newScale = transform.localScale;
+            newScale.x *= -1;
+            transform.localScale = newScale;
+            Debug.Log("it hit the trigger");
         }
     }
 }
