@@ -30,7 +30,7 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin Drag");
+        //Debug.Log("Begin Drag");
         lastPosition = transform.parent;
         transform.SetParent(lastPosition.root);
         transform.SetAsLastSibling();
@@ -39,7 +39,7 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End Drag");
+        //Debug.Log("End Drag");
         transform.position = lastPosition.position;
         transform.SetParent(lastPosition);
         itemIcon.raycastTarget = true;
@@ -47,7 +47,7 @@ public class ItemInfo : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Dragging");
+        //Debug.Log("Dragging");
         transform.position = Mouse.current.position.ReadValue();
     }
 }

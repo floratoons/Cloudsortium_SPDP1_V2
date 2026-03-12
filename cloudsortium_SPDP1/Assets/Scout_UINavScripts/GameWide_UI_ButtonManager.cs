@@ -22,17 +22,6 @@ public class GameWide_UI_ButtonManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
-    {
-        PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(1);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
     public void StartReturn()
     {
         SceneManager.LoadScene(0);

@@ -13,6 +13,8 @@ public class CustomizationButtonManager : MonoBehaviour
 
     public bool finishedGame = false;
 
+    public GameObject popupcanvas;
+
     //private int clicks = 0;
     //public GameObject popup1;
     //public GameObject popup2;
@@ -85,5 +87,20 @@ public class CustomizationButtonManager : MonoBehaviour
             Debug.Log("current cust sprite is " + custSprites[custSpriteIndex].name);
         }
         eventSystem.SetSelectedGameObject(custSprites[custSpriteIndex].gameObject);
+    }
+
+    public void DismissPopup()
+    {
+        popupcanvas.SetActive(false);
+    }
+
+    public void StartPlatformer()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void StartReturn()
+    {
+        SceneManager.LoadScene(0);
     }
 }
